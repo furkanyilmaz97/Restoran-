@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    min-height: 100vh;
+    background-color: #F1EDED;
+}
+
+.container {
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    color: #fff;
+    font-style: italic;
+    font-size: 24px;
+}
+
+.menu {
+    background: #000;
+    padding: 20px;
+}
+
+.menu .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-elemanlar {
+    display: flex;
+}
+
+.menu-elemanlar a {
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    margin-left: 15px;
+    border-radius: 35px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.kirmizi-yazi {
+    color: #ff0077;
+}
+
+.yesil-yazi {
+    color: #21ac7f;
+}
+
+.menu-alti {
+    width: 100%;
+    background: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.secim {
+    margin-top: 15px;
+    display: flex;
+}
+
+.secim select {
+    border: 2px solid #000;
+    padding: 10px 20px;
+    margin-left: 15px;
+    border-radius: 35px;
+    color: #000;
+    font-weight: bold;
+}
+
+.restoranlar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.restoranlar ul a {
+    padding: 10px;
+    width: 25%;
+    margin-bottom: 15px;
+}
+
+.card-baslangic {
+    background: white;
+    border-radius: 10px;
+    transition: all 300ms;
+}
+
+.card-baslangic:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.75);
+}
+
+.resim-alani {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-baslangic img {
+    border-radius: 10px;
+    height: 250px;
+}
+
+
+.bilgiler {
+    padding: 0 10px 10px;
+}
+
+.restoran-adi {
+    height: 50px;
+    padding: 5px 8px 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #232323;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+
+.popup-dis {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 55;
+    display: none;
+}
+
+#buyukResimPopup{
+    position: absolute!important;
+}
+
+.poup {
+    position: absolute;
+    width: 500px;
+    height: auto;
+    background: #fff;
+    left: 0;
+    right: 0;
+    margin: 50px auto;
+    border-radius: 25px;
+}
+
+.popup-baslik {
+    box-sizing: border-box;
+    width: 100%;
+    background: #F0F0F8;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.popup-kapat {
+    font-size: 18px;
+    color: #5b5b5b;
+}
+
+.popup-kapat:hover {
+    opacity: 0.5;
+}
+
+.form {
+    width: 100%;
+    padding: 30px;
+
+}
+
+.grup {
+    position: relative;
+    margin-bottom: 22px;
+    width: 100%;
+}
+
+.form label {
+    font-size: 16px;
+    color: #555;
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form input {
+    width: 100%;
+    outline: none;
+    margin: 0;
+    border: none;
+    font-size: 14px;
+    font-family: inherit;
+    line-height: 35px;
+    background: #fafafa;
+    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, .08);
+    border-radius: 5px;
+    padding: 0 20px;
+    color: #666;
+}
+
+.buton {
+    border: 2px solid #000;
+    padding: 10px 20px;
+    margin-left: 15px;
+    border-radius: 35px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.detay-resim-alani {
+    display: flex;
+    width: 100%;
+    height: 370px;
+}
+
+.ilk-resim {
+    width: 62%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.ilk-resim img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: none;
+    opacity: 1;
+    transition: transform 0.4s ease-in-out 0s, opacity 1.63s ease 0s, filter 0.4s ease 0s;
+}
+
+.ilk-resim:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+}
+
+
+.kolon {
+    width: 19%;
+    height: 100%;
+    margin-left: 0.6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.kolon .galeri {
+    min-width: 62.4%;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    margin: 0px 0px 0.3rem;
+    overflow: hidden;
+}
+
+
+.galeri img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: none;
+    opacity: 1;
+    transition: transform 0.4s ease-in-out 0s, opacity 1.63s ease 0s, filter 0.4s ease 0s;
+}
+
+.galeri:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+}
+
+
+.detay-bilgi-alani .baslik {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mutfak-turu {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.mutfak-turu ul {
+    display: flex;
+    margin-left: 30px;
+}
+
+.mutfak-turu li {
+    margin-right: 10px;
+    border: 1px solid #929292;
+    padding: 5px 10px;
+    border-radius: 30px;
+}
+
+.tutar {
+    margin-top: 15px;
+}
+
+.daha-fazla {
+    margin-top: 15px;
+}
+
+.daha-fazla ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.daha-fazla ul li {
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.daha-fazla ul li span {
+    border: 1px solid #929292;
+    padding: 5px 10px;
+    border-radius: 30px;
+}
